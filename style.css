@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.conocer {
+  cursor: pointer;
+}
+
+.conocer::first-letter {
+  font-family: "Uncial Antiqua", cursive; /* Fuente de cuento */
+  font-size: 3em; /* Letra más grande */
+  color: #8b0000; /* Rojo oscuro */
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Efecto de sombra */
+
+  /* Estilos del recuadro */
+  border: 2px solid #8b0000; /* Borde del cuadro */
+  padding: 5px 10px; /* Espaciado dentro del recuadro */
+  margin-right: 8px; /* Espacio entre la letra y el texto */
+  display: inline-block; /* Permite que el recuadro se ajuste a la letra */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.menu {
+  position: absolute;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  gap: 2em;
+  bottom: 3vh;
+  width: 100vw;
+  z-index: 2;
+  opacity: 0;
+  padding: 0 10px;
+}
+
+ul li {
+  font-size: 1.5em;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  bottom: 3vh;
+  display: inline;
+  margin: 10px auto;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+.videoContainer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: -1;
+}
+
+video {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  height: 90vh;
+  align-items: center;
+  z-index: 1;
+}
+
+svg {
+  width: 20em;
+  z-index: 2;
+}
+
+svg path {
+  fill: transparent;
+  stroke: #ffff;
+  stroke-width: 0.5;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+}
+
+@keyframes textAnimation {
+  0% {
+    stroke-dashoffset: 500;
+  }
+  80% {
+    fill: transparent;
+  }
+  100% {
+    fill: #ffff;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (width < 500px) {
+  .menu {
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    gap: 2em;
+    bottom: 3vh;
+    width: 100vw;
+    z-index: 2;
+    opacity: 0;
+    padding: 3vh 10px;
+  }
+
+  ul li {
+    font-size: 1em;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    bottom: 3vh;
+    display: inline-block;
+    margin: 10px auto;
+  }
+}
+
+@media (500px <= width <= 1000px) {
+  .menu {
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    gap: 2em;
+    bottom: -1em;
+    width: 100vw;
+    z-index: 2;
+    opacity: 0;
+    padding: 0 50px;
+  }
+
+  ul li {
+    font-size: 1em;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    bottom: 3vh;
+    display: inline-block;
+    margin: 10px auto;
+  }
+}
