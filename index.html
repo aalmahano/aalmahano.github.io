@@ -14,7 +14,7 @@
     <div class="videoContainer">
       <video id="videoBrutalId" class="videoBrutal" autoplay="true">
         <source
-          src="0217/0217.mp4"
+          src="0217/0217-copy.mp4"
           type="video/mp4"
           media="(min-width: 600px)"
         />
@@ -53,6 +53,8 @@
       function gracias() {
         alert("gracias");
       }
+      const video = document.getElementById("videoBrutalId");
+
       document.addEventListener(
         "click",
         () => {
@@ -62,19 +64,21 @@
           conocer.style.animation = "cargar 2s linear forwards";
           setTimeout(function () {
             conocer.style.display = "none";
-            const video = document.getElementById("videoBrutalId");
             video.currentTime = 0;
-            const path = document.querySelector("svg path");
-            path.style.animation = "textAnimation 4s linear 1 forwards";
-            path.style.animationDelay = "52s";
-            const menu = document.getElementById("menu");
-            menu.style.animation = "aparecer 1s ease forwards";
-            menu.style.animationDelay = "54s";
             video.play();
           }, 2000);
         },
         { once: true }
       );
+      video.addEventListener("timeupdate", () => {
+        if (video.currentTime >= 52) {
+          const path = document.querySelector("svg path");
+          path.style.animation = "textAnimation 4s linear 1 forwards";
+          const menu = document.getElementById("menu");
+          menu.style.animation = "aparecer 1s ease forwards";
+          menu.style.animationDelay = "2s";
+        }
+      });
     </script>
   </body>
 </html>
