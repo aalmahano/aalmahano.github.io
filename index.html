@@ -14,11 +14,11 @@
     <div class="videoContainer">
       <video id="videoBrutalId" class="videoBrutal" autoplay="true">
         <source
-          src="../0217/0217.mp4"
+          src="0217/0217.mp4"
           type="video/mp4"
           media="(min-width: 600px)"
         />
-        <source src="../video_responsive/0217 movil.mp4" type="video/mp4" />
+        <source src="video_responsive/0217 movil.mp4" type="video/mp4" />
         Tu navegador no soporta videos HTML5
       </video>
       <div class="title">
@@ -37,7 +37,10 @@
       </div>
     </div>
     <div class="container">
-      <div id="conocer" class="conocer">Una vida en un minuto...</div>
+      <div id="conocer" class="conocer">
+        <span id="first-letter" class="first-letter">U</span>na vida en un
+        minuto...
+      </div>
       <div>
         <ul id="menu" class="menu">
           <li onclick="gracias()">Un Rockabilly</li>
@@ -53,17 +56,22 @@
       document.addEventListener(
         "click",
         () => {
+          const firstLetter = document.getElementById("first-letter");
           const conocer = document.getElementById("conocer");
-          conocer.style.display = "none";
-          const video = document.getElementById("videoBrutalId");
-          video.currentTime = 0;
-          const path = document.querySelector("svg path");
-          path.style.animation = "textAnimation 4s linear 1 forwards";
-          path.style.animationDelay = "52s";
-          const menu = document.getElementById("menu");
-          menu.style.animation = "aparecer 1s ease forwards";
-          menu.style.animationDelay = "54s";
-          video.play();
+          firstLetter.style.webkitAnimationPlayState = "paused";
+          conocer.style.animation = "cargar 2s linear forwards";
+          setTimeout(function () {
+            conocer.style.display = "none";
+            const video = document.getElementById("videoBrutalId");
+            video.currentTime = 0;
+            const path = document.querySelector("svg path");
+            path.style.animation = "textAnimation 4s linear 1 forwards";
+            path.style.animationDelay = "52s";
+            const menu = document.getElementById("menu");
+            menu.style.animation = "aparecer 1s ease forwards";
+            menu.style.animationDelay = "54s";
+            video.play();
+          }, 2000);
         },
         { once: true }
       );

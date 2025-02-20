@@ -26,7 +26,7 @@ ul {
   cursor: pointer;
 }
 
-.conocer::first-letter {
+.first-letter {
   font-family: "Uncial Antiqua", cursive; /* Fuente de cuento */
   font-size: 3em; /* Letra más grande */
   color: #8b0000; /* Rojo oscuro */
@@ -39,6 +39,26 @@ ul {
   margin-right: 8px; /* Espacio entre la letra y el texto */
   display: inline-block; /* Permite que el recuadro se ajuste a la letra */
   border-radius: 5px; /* Bordes redondeados */
+  animation: latido 1s linear infinite alternate;
+}
+
+@keyframes latido {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes cargar {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+    opacity: 0;
+  }
 }
 
 .menu {
@@ -85,8 +105,11 @@ li:hover {
 
 video {
   position: fixed;
-  width: 100vw;
-  height: 100vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100vw;
+  min-height: 100vh;
   object-fit: cover;
   z-index: -1;
 }
