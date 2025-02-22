@@ -4,10 +4,15 @@
   padding: 0;
 }
 
+body {
+  color: white;
+  text-shadow: 2px 2px 0px black;
+}
+
 p {
   padding: 20px;
   text-align: justify;
-  font-size: 1em;
+  font-size: 1.4em;
 }
 
 .autoShow {
@@ -55,14 +60,14 @@ p {
     margin: 20vh auto;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px) contrast(120%);
     border-radius: 20px;
   }
 }
 
 .despedida {
   padding: 20px;
-  font-size: 1.2em;
+  font-size: 1.4em;
   margin-right: auto;
 }
 
@@ -96,7 +101,7 @@ li:hover {
 
 a:not(.poveda) {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 h1 {
