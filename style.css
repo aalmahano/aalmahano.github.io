@@ -90,6 +90,11 @@ li:hover {
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 .videoContainer {
   position: fixed;
   top: 50%;

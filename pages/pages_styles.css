@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  padding: 20px;
+  text-align: justify;
+  font-size: 1.5em;
+}
+
+.autoShow {
+  animation: autoShowAnimation both;
+  animation-timeline: view(70% 5%);
+}
+
+@keyframes autoShowAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(200px) scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.parent {
+  display: flex;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  margin: 20vh auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px) contrast(120%);
+  border-radius: 20px;
+}
+
+@media (width < 500px) {
+  .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    margin: 20vh auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(6px);
+    border-radius: 20px;
+  }
+}
+
+.despedida {
+  padding: 20px;
+  font-size: 1.5em;
+  margin-right: auto;
+}
+
+.menu {
+  position: relative;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  top: 5vh;
+  width: 50vw;
+  margin: auto;
+  padding: 0 10px;
+}
+
+ul li {
+  font-size: 1.5em;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  bottom: 3vh;
+  display: inline;
+  margin: 10px auto;
+  font-weight: bold;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+a:not(.poveda) {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  padding: 50px;
+}
+
+.background-guitar {
+  background-image: url("../img/solo_guitarra_coritel.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  height: 100vh;
+}

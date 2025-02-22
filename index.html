@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Soy Ángel</title>
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap"
@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="videoContainer">
-      <video id="videoBrutalId" class="videoBrutal" autoplay="true">
+      <video id="videoBrutalId" class="videoBrutal">
         <source
           src="0217/0217-copy.mp4"
           type="video/mp4"
@@ -43,16 +43,13 @@
       </div>
       <div>
         <ul id="menu" class="menu">
-          <li onclick="gracias()">Un Rockabilly</li>
-          <li onclick="gracias()">Curriculum</li>
-          <li onclick="gracias()">Proyectos</li>
+          <li><a href="pages/rockabilly.html">Un Rockabilly</a></li>
+          <li><a href="pages/curriculum.html">Curriculum</a></li>
+          <li><a href="pages/proyectos.html">Proyectos</a></li>
         </ul>
       </div>
     </div>
     <script>
-      function gracias() {
-        alert("gracias");
-      }
       const video = document.getElementById("videoBrutalId");
 
       document.addEventListener(
