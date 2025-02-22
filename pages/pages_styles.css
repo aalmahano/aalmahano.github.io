@@ -111,7 +111,7 @@ h1 {
 .background-guitar {
   background-image: url("../img/solo_guitarra_coritel.jpeg");
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin: 0;
