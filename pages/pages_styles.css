@@ -63,6 +63,29 @@ p {
     backdrop-filter: blur(6px) contrast(120%);
     border-radius: 20px;
   }
+
+  .appTinglao {
+    width: 80vw;
+  }
+
+  .video-wrapper {
+    width: 100%;
+    position: relative;
+  }
+}
+
+.video-wrapper__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-wrapper {
+  width: 100%;
+  position: relative;
+  padding-top: 56.25%;
 }
 
 .despedida {
@@ -116,4 +139,18 @@ h1 {
   height: 100%;
   object-fit: cover; /* Ajusta la imagen para cubrir toda el área */
   z-index: -1; /* Asegura que la imagen esté en el fondo */
+}
+
+.background-projects {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen para cubrir toda el área */
+  z-index: -1; /* Asegura que la imagen esté en el fondo */
+}
+
+.appTinglao {
+  height: 100vh;
 }
