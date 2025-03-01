@@ -287,9 +287,13 @@ a:not(.poveda) {
 }
 
 @media (width < 500px) {
+  .menu {
+    width: 100vw;
+  }
+
   .chat {
     margin-top: 10vh;
-    margin-bottom: auto;
+    margin-bottom: 10vh;
     width: 100vw;
   }
 
@@ -315,7 +319,7 @@ a:not(.poveda) {
     border-radius: 25px;
     background-color: rgb(82, 172, 255);
     padding: 10px;
-    font-size: 1.5em;
+    font-size: 1.2em;
     text-align: justify;
     position: relative;
   }
@@ -325,7 +329,57 @@ a:not(.poveda) {
     margin-right: 10px;
     border-radius: 25px;
     background-color: #58cc71;
-    font-size: 1.5em;
+    font-size: 1.2em;
+    padding: 10px;
+    position: relative;
+  }
+}
+
+@media (540px <= width <= 1024px) {
+  .menu {
+    width: 100vw;
+    font-size: 1.2em;
+  }
+
+  .chat {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    width: 100vw;
+  }
+
+  .user_info span {
+    font-size: 1.3em;
+    color: white;
+  }
+  .user_info p {
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .card {
+    height: 65vh;
+    border-radius: 15px !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+  }
+
+  .msg_cotainer {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    border-radius: 25px;
+    background-color: rgb(82, 172, 255);
+    padding: 10px;
+    font-size: 1.2em;
+    text-align: justify;
+    position: relative;
+  }
+  .msg_cotainer_send {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
+    border-radius: 25px;
+    background-color: #58cc71;
+    font-size: 1.2em;
     padding: 10px;
     position: relative;
   }
